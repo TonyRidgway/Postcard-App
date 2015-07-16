@@ -12,8 +12,13 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var nameEntered: UILabel!
+    
+    
     @IBOutlet weak var myName: UITextField!
     @IBOutlet weak var myMessageTextField: UITextField!
+    
+    
     @IBOutlet weak var mailButton: UIButton!
     
 
@@ -33,6 +38,13 @@ class ViewController: UIViewController {
         messageLabel.hidden = false
         messageLabel.text = myMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
+        
+        nameEntered.hidden = false
+        nameEntered.text = myName.text
+        nameEntered.textColor = UIColor.blueColor()
+        
+        myName.text = ""
+        myName.resignFirstResponder()
         
         
         myMessageTextField.text = ""
